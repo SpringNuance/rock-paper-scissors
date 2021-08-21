@@ -62,7 +62,7 @@ document.querySelectorAll('.button').forEach(button => {
         document.querySelectorAll('.button').forEach(button => button.disabled = true)
       } 
       if (computerPoint === 5){
-        document.querySelector('.result').innerHTML = "Bad news! The machine has beaten you!"
+        document.querySelector('.result').innerHTML = "Bad news! The machine has beaten you! Try again"
         document.getElementById("replay").style.visibility = "visible"
         document.querySelectorAll('.button').forEach(button => button.disabled = true)
       }
