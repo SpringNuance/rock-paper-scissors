@@ -12,10 +12,11 @@
         <h2>In this game, you will play against the computer</h2>
         <h2>Whoever wins the first 5 matches will win the dual</h2>
       </header>
+      <div class= "center">
         <button class = "button" id = "hammer"><img id = "hammer" src="./images/hammer.png"/><h3 id = "hammer" >Hammer</h3></button>
         <button class = "button" id = "paper"><img id = "paper" src="./images/paper.png"/><h3 id = "paper">Paper</h3></button>
         <button class = "button" id = "scissors"><img id = "scissors" src="./images/scissors.png"/><h3 id = "scissors">Scissors</h3></button>
-
+      </div>
 <!--
      <div class="selections">
         <button class="selection" data-selection="rock">✊</button>
@@ -29,7 +30,7 @@
       </div>
       <div><p class="report"></p></div>
       <div><h3 class="result"></h3></div>
-      <div id="replay">
+      <div onclick = "replay()" id="replay">
         <button>Replay!</button>
       </div>
   </body>

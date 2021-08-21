@@ -57,13 +57,25 @@ document.querySelectorAll('.button').forEach(button => {
     button.addEventListener('click', event => {
       document.querySelector('.report').innerHTML = singleRound(event.target.id, computerPlay());
       if (playerPoint === 5){
-        document.querySelector('.result').innerHTML = "Congratulations! You have defeated the machine"
+        document.querySelector('.result').innerHTML = "Congratulations! You have defeated the machine!"
         document.getElementById("replay").style.visibility = "visible"
+        document.querySelectorAll('.button').forEach(button => button.disabled = true)
       } 
       if (computerPoint === 5){
-        document.querySelector('.result').innerHTML = "Bad news! The machine has beaten you. Try again next time!"
+        document.querySelector('.result').innerHTML = "Bad news! The machine has beaten you!"
         document.getElementById("replay").style.visibility = "visible"
+        document.querySelectorAll('.button').forEach(button => button.disabled = true)
       }
     })
   })
 
+function replay() {
+    playerPoint = 0;
+    computerPoint = 0;
+    document.querySelectorAll('.button').forEach(button => button.disabled = false)
+    document.getElementById("score1").innerHTML = playerPoint;
+    document.getElementById("score2").innerHTML = computerPoint;
+    document.querySelector('.report').innerHTML = ""
+    document.querySelector('.result').innerHTML = ""
+    document.getElementById("replay").style.visibility = "hidden"
+}
